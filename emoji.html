@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+
+        #emoji {
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+
+        button {
+            position: fixed;
+            display: block;
+            justify-content: center;
+            align-self: center;
+            background-color: chartreuse;
+            color: aliceblue;
+            border: 1px solid yellow;
+            border-radius: 10px;
+            font-size: 25px;
+            width: 70px;
+            height: 50px;
+            top: 33%;
+            left: 48%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="emoji">hello</div>
+        <button onclick="generate()">click</button>
+    </div>
+
+
+
+    <script>
+        function generate() {
+            //const emojis = document.getElementsByClassName("emoji");
+            const emoji = ['\u{1F600}', '\u{1F601}', '\u{1F602}', '\u{1F603}', '\u{1F604}', '\u{1F605}', '\u{1F606}', '\u{1F607}', '\u{1F608}', '\u{1F609}'];
+            const randomIndex = Math.floor(Math.random() * emoji.length);
+            const emo = emoji[randomIndex];
+            const emojiEle = document.getElementById('emoji');
+            emojiEle.innerText = emo;
+            emojiEle.style.fontSize = '10em';
+            // emojiEle.style.backgroundColor = 'green';
+
+        }
+    </script>
+</body>
+
+
+
+</html>
